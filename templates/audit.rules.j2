@@ -6,6 +6,10 @@
 # Increase the buffers to survive stress events.
 # Make this bigger for busy systems
 -b 320
+{% if auditd_base_rules %}
 {{ auditd_base_rules | join('\n') }}
+{% endif %}
+{% if auditd_custom_rules %}
 {{ auditd_custom_rules | join('\n') }}
+{% endif %}
 {% if auditd_enable_immutable %}-e 2{% endif %}

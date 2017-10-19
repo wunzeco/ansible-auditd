@@ -1,4 +1,4 @@
 ---
-- include: install.yml
+- include: install_{{ ansible_os_family|lower }}.yml
 - include: config.yml
 - include: service.yml
