@@ -7,7 +7,6 @@ end
 %W(
   /etc/audit/auditd.conf
   /etc/audit/audit.rules
-  /etc/audit/rules.d/audit.rules
 ).each do |f|
 	describe file(f) do
 		it { should be_file }

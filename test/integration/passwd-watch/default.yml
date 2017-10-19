@@ -1,0 +1,14 @@
+---
+- name: auditd integration tests
+  hosts: test-kitchen
+
+  vars:
+    auditd_base_rules:
+      - "-w /etc/passwd -p wa -k passwd_changes"
+
+  roles:
+    - ansible-auditd
+
+  post_tasks:
+    - name: Add user to passwd file
+      shell: getent passwd testuser || useradd testuser

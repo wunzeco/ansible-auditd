@@ -1,4 +1,8 @@
-#{{ ansible_managed }}
+# {{ ansible_managed }}
+# This file contains the auditctl rules that are loaded
+# whenever the audit daemon is started via the initscripts.
+# The rules are simply the parameters that would be passed
+# to auditctl.
 
 # First rule - delete all
 -D
@@ -6,6 +10,7 @@
 # Increase the buffers to survive stress events.
 # Make this bigger for busy systems
 -b 320
+
 {% if auditd_base_rules %}
 {{ auditd_base_rules | join('\n') }}
 {% endif %}
