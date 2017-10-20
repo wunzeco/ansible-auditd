@@ -16,10 +16,6 @@ platforms:
   - name: ubuntu-14.04
 
 suites:
-  - name: default
-    driver:
-      network:
-        - ["private_network", { ip: "172.29.129.173" }]
   - name: passwd-watch
     driver:
       network:

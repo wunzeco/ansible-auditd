@@ -1,6 +1,0 @@
----
-- name: auditd integration tests
-  hosts: test-kitchen
-
-  roles:
-    - ansible-auditd
