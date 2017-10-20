@@ -1,0 +1,11 @@
+# {{ ansible_managed }}
+{% if ansible_os_family|lower == 'debian' %}
+{% set config_dir = '/etc/default' %}
+{% else %}
+{% set config_dir = '/etc/sysconfig' %}
+{% endif %}
+#
+# This file is ignored unless you set USE_AUGENRULES to 'yes'
+# in {{ config_dir }}/auditd.
+# If USE_AUGENRULES is 'no', rules must be added to
+# /etc/audit/audit.rules, the directory above this one
