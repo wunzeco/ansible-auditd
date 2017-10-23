@@ -5,8 +5,8 @@ auditd_disp_syslog_active: 'no'
 auditd_log_file: /var/log/audit/audit.log
 auditd_log_format: raw
 auditd_log_group: root
-auditd_priority_boost: 4
-auditd_flush: incremental
+auditd_priority_boost: 3
+auditd_flush: none
 auditd_frequency: 20
 auditd_num_logs: 5
 auditd_disp_qos: lossy
@@ -15,10 +15,10 @@ auditd_name_format: NONE
 auditd_max_log_file: 20
 auditd_max_log_file_action: rotate
 auditd_space_left: 200
-auditd_space_left_action: email
+auditd_space_left_action: suspend
 auditd_action_mail_acct: root
 auditd_admin_space_left: 80
-auditd_admin_space_left_action: single
+auditd_admin_space_left_action: ignore
 auditd_disk_full_action: suspend
 auditd_disk_error_action: suspend
 auditd_tcp_listen_queue: 5
